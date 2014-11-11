@@ -38,6 +38,11 @@ em {
   position: absolute;
 }
 
+.header img {
+  width: 90%;
+  border-radius: 5px;
+}
+
 .header ul {
   padding: 0.2em;
 }
