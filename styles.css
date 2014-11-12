@@ -60,7 +60,8 @@ em {
   padding-left: 20px;
   border-left-width: 1px;
   border-left-style: solid;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .content ul {
