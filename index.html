@@ -10,12 +10,26 @@
       margin-right: auto;
     }
 
-    h1 {
+    .name-and-title {
+      margin: 0 0 1em;
+      padding: 0;
+    }
+
+    .name-and-title .name {
       font-size: 2.2em;
+      line-height: 1;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .name-and-title .title {
+      font-size: 1em;
     }
 
     h3 {
       font-size: 1.6em;
+      margin-top: 14px;
+      margin-bottom: 0;
     }
 
     h5 {
@@ -26,9 +40,14 @@
       font-size: 1.1em;
     }
 
+    p {
+      font-size: 0.7em;
+      margin: 0;
+    }
+
     li {
       list-style-type: none;
-      font-size: 0.9em;
+      font-size: 0.8em;
     }
 
     em {
@@ -43,9 +62,17 @@
       position: absolute;
     }
 
-    .header img {
-      width: 90%;
+    .header .img-crop {
+      height: 180px;
+      width: 180px;
       border-radius: 5px;
+      overflow: hidden;
+    }
+
+    .header img {
+      height: auto;
+      margin-left: -16px;
+      width: 130%;
     }
 
     .header ul {
@@ -65,7 +92,7 @@
       padding-left: 20px;
       border-left-width: 1px;
       border-left-style: solid;
-      padding-bottom: 20px;
+      padding-bottom: 0;
       margin-bottom: 10px;
     }
 
@@ -73,13 +100,14 @@
       padding-left: 1.0em;
       padding-top: 0px;
       padding-bottom: 0px;
-      margin-top: 0.8em;
-      margin-bottom: 0.8em;
+      margin-top: 0.4em;
+      margin-bottom: 0.4em;
     }
 
     .content li {
       padding-top: 0.4em;
       padding-bottom: 0.4em;
+      padding: 0.5em 0;
       line-height: 1.5em;
     }
 
@@ -91,16 +119,21 @@
 
   <div class="header">
 
-    <h1>Max Blum</h1>
+    <div class="name-and-title">
+      <h1 class="name">Max Blum</h1>
+      <p class="title">Software Engineer</p>
+    </div>
 
-    <img
-      alt="Max Blum's Awesome Mug"
-      src="https://avatars2.githubusercontent.com/u/7944695"
-    >
+    <div class='img-crop'>
+      <img
+        alt="Max Blum's Awesome Mug"
+        src="https://scontent-lga3-1.xx.fbcdn.net/v/t1.0-9/10628585_10101236807394864_5300406392859019697_n.jpg?oh=15fd92899680fd0701b8a5ac50ff8908&oe=58379426"
+      >
+    </div>
 
     <ul>
       <li><a href="mailto:max.blum@gmail.com">max.blum@gmail.com</a></li>
-      <li><a href="http://github.com/maxpblum">github/maxpblum</a></li>
+      <li>(914) 282-0864</li>
     </ul>
 
   </div>
@@ -111,22 +144,32 @@
 
     <h3>Experience</h3>
 
-    <h5>Recent Projects</h5>
+    <h5>Tictail</h5>
+    <p>Software Engineer, 2015 &#8211; present.</p>
 
     <ul>
-      <li><strong>Hanubi</strong>, an online multiplayer implementation of the recent, award-winning card game Hanabi. Written using Javascript, Node.js, Socket.io, React.js, Redis, Underscore.js, and jQuery. Live instance on Heroku at <a href="hanubi.herokuapp.com">hanubi.herokuapp.com</a>.</li>
-      <li><strong>Maxteroids</strong>, a clone of the classic arcade game Asteroids, written in Python 2 with Pygame.</li>
-      <li><strong>Roundtable</strong>, a whimsical chatroom written with Python, Flask, HTTP, AJAX, Javascript, jQuery, and HTML/CSS.</li>
+      <li>Built an API and frontend integration to combine live Tictail marketplace data with content hosted at <a href="https://contentful.com">contentful.com</a>, allowing the creation of dynamic, shoppable content marketing pieces. (<a href="https://tictail.com/p/10-home-accents-that-break-all-the-rules">Example</a>)</li>
+      <li>Developed a React framework for rendering self-resizing iframes using a Promise-based messaging system.</li>
+      <li>Work on all parts of Tictail's stack, including frontend UI, backend services, external integrations and data exports, and the API.</li>
     </ul>
 
-    <h5>Brooklyn College Conservatory Singers, Conductor and Adjunct Lecturer</h5>
+
+    <h5>Student Projects</h5>
+    <p>Built while attending Hacker School (see "Education").</p>
+
+    <ul>
+      <li><strong>Hanubi</strong> (<a href="https://github.com/maxpblum/hanubi">source</a>), an online multiplayer implementation of the recent, award-winning card game Hanabi. Written using Javascript, Node.js, Socket.io, React.js, Redis, Underscore.js, and jQuery. Live instance on Heroku at <a href="https://hanubi.herokuapp.com">hanubi.herokuapp.com</a>.</li>
+      <li><strong>Maxteroids</strong> (<a href="https://github.com/maxpblum/maxsteroids">source</a>), a clone of the classic arcade game Asteroids, written in Python 2 with Pygame.</li>
+    </ul>
+
+    <h5>Brooklyn College</h5>
+    <p>Choir Conductor and Lecturer, 2013 &#8211; 2014</p>
 
     <ul>
 
       <li>Auditioned, rehearsed, taught and conducted the 30-voice choir.
-      <br/>Recruited and coordinated instrumentalists from inside and outside the student body.
-      <br/>Coached student vocal soloists to help them deliver musical, stylistically appropriate performances.
-      <br/>Colloborated with faculty to present multi-ensemble concerts, exposing new and different musical ideas, styes, and repertoire.</li>
+      <br/>Coached student vocal soloists to deliver musical, stylistic performances.
+      <br/>Colloborated with faculty on eclectic, multi-ensemble concerts.</li>
 
     </ul>
 
@@ -137,7 +180,8 @@
     <h3>Skills</h3>
 
     <ul>
-      <li>Programming languages: Javascript, Python, HTML/CSS, Scheme, Java (in descending order of experience)</li>
+      <li>Programming languages: Javascript (ES5 and ES6), Python, SQL, CSS/SCSS, BASH, GNU Make</li>
+      <li>Platforms and frameworks: React.js, Redux, Flux, Node+Express, Webpack, Flask, SQLAlchemy, Amazon Redshift</li>
       <li>Spoken languages: English, Spanish</li>
     </ul>
 
@@ -149,11 +193,12 @@
 
     <ul>
 
-      <li>Hacker School Sep-Nov 2014<br/>A 12-week intensive programming retreat.</li>
+      <li>Recurse Center a.k.a. Hacker School Sep-Nov 2014<br/>A 12-week intensive programming retreat. <a href="https://recurse.com">More information</a></li>
       
       <li>Yale University
-      <br/>M.M. in Choral Conducting, 2011. Awarded the Institute of Sacred Music certificate, the Edwin Stanley Seder scholarship, and the Hugh Giles scholarship.
-      <br/>B.A. in Music, 2009. Honors in Music. Cumulative GPA: 3.72</li>
+      <br/>M.M. in Choral Conducting, 2011.
+      <br/>B.A. in Music, 2009. Honors in Music. Cumulative GPA: 3.72
+      <br/>Completed Computer Science courses 112 (Java) and 201 (Scheme, taught by Dana Angluin).</li>
 
     </ul>
 
