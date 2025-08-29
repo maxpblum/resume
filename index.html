@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Max Blum-Campo | Resume</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <style>
-        /* --- General & Reset Styles --- */
-        body {
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Max Blum-Campo | Resume</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+            /* --- General & Reset Styles --- */
+            body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: #f8f9fa;
             color: #212529;
@@ -18,9 +18,8 @@
             padding: 0;
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
-        }
-
-        .resume-container {
+            }
+            .resume-container {
             max-width: 8.5in;
             min-height: 11in;
             margin: 2rem auto;
@@ -29,23 +28,20 @@
             border-radius: 8px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
             box-sizing: border-box;
-        }
-
-        /* --- Typography --- */
-        h1, h2, h3 {
+            }
+            /* --- Typography --- */
+            h1, h2, h3 {
             margin: 0;
             padding: 0;
             font-weight: 600;
-        }
-
-        h1 {
+            }
+            h1 {
             font-size: 2.5rem;
             color: #1a1a1a;
             letter-spacing: -1px;
             margin-bottom: 0.25rem;
-        }
-
-        h2 {
+            }
+            h2 {
             font-size: 1.25rem;
             color: #0056b3; /* A professional blue */
             text-transform: uppercase;
@@ -54,114 +50,91 @@
             margin-bottom: 0.75rem;
             border-bottom: 2px solid #e9ecef;
             padding-bottom: 0.5rem;
-        }
-
-        h3 {
+            }
+            h3 {
             font-size: 1.1rem;
             font-weight: 600;
             color: #343a40;
-        }
-        
-        strong {
+            }
+            strong {
             font-weight: 600;
             color: #495057;
-        }
-
-        p {
+            }
+            p {
             margin: 0 0 0.5rem 0;
-        }
-        
-        a {
+            }
+            a {
             color: #0056b3;
-            text-decoration: none;
             font-weight: 500;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        /* --- Header & Contact Info --- */
-        .header {
+            }
+            /* --- Header & Contact Info --- */
+            .header {
             text-align: left;
             margin-bottom: 2rem;
-        }
-
-        .contact-info {
+            }
+            .contact-info {
             display: flex;
             justify-content: flex-start;
             gap: 1.5rem;
             margin-top: 0.5rem;
             color: #495057;
             font-size: 0.95rem;
-        }
-        
-        .contact-info a {
+            }
+            .contact-info a {
             color: #495057;
-        }
-
-        /* --- Experience Section --- */
-        .job {
+            }
+            /* --- Experience Section --- */
+            .job {
             margin-bottom: 1.25rem;
-        }
-
-        .job-header {
+            }
+            .job-header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
             margin-bottom: 0.5rem;
-        }
-
-        .job-title {
+            }
+            .job-title {
             font-size: 1rem;
             font-weight: 500;
             color: #343a40;
-        }
-        
-        .job-company {
+            }
+            .job-company {
             font-size: 1.1rem;
             font-weight: 600;
-        }
-
-        .job-date {
+            }
+            .job-date {
             font-style: italic;
             color: #6c757d;
             font-size: 0.9rem;
             white-space: nowrap;
-        }
-        
-        .job-description {
+            }
+            .job-description {
             margin-left: 1.25rem; /* Indent the bullet points */
-        }
-
-        ul {
+            }
+            ul {
             list-style-type: disc;
             padding-left: 0;
             margin: 0;
-        }
-
-        li {
+            }
+            li {
             margin-bottom: 0.5rem;
             padding-left: 0.5rem;
             color: #495057;
             font-size: 0.95rem;
-        }
-        
-        .sub-item {
+            }
+            .sub-item {
             font-size: 0.9rem;
             color: #6c757d;
             margin-top: 0.25rem;
             margin-left: 1rem;
             list-style-type: circle;
-        }
-
-        /* --- Skills Section --- */
-        .skills-list {
+            }
+            /* --- Skills Section --- */
+            .skills-list {
             list-style-type: none;
             padding: 0;
-        }
-
-        .skills-list li {
+            }
+            .skills-list li {
             background: #f1f3f5;
             border-radius: 4px;
             padding: 0.25rem 0.75rem;
@@ -170,39 +143,35 @@
             display: inline-block;
             font-size: 0.9rem;
             color: #343a40;
-        }
-        
-        .skills-category {
+            }
+            .skills-category {
             font-weight: 600;
             color: #212529;
-        }
-
-        /* --- Education Section --- */
-        .education-entry {
+            }
+            /* --- Education Section --- */
+            .education-entry {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
             margin-bottom: 0.5rem;
-        }
-        
-        .education-degree {
+            }
+            .education-degree {
             font-weight: 500;
-        }
-
-        /* --- Print Styles --- */
-        @media print {
+            }
+            /* --- Print Styles --- */
+            @media print {
             body {
-                background-color: #fff;
-                font-size: 10pt; /* Adjust base font size for print */
-                line-height: 1.4;
+            background-color: #fff;
+            font-size: 10pt; /* Adjust base font size for print */
+            line-height: 1.4;
             }
             .resume-container {
-                max-width: 100%;
-                min-height: auto;
-                margin: 0;
-                padding: 0.5in; /* Standard print margin */
-                box-shadow: none;
-                border-radius: 0;
+            max-width: 100%;
+            min-height: auto;
+            margin: 0;
+            padding: 0.5in; /* Standard print margin */
+            box-shadow: none;
+            border-radius: 0;
             }
             h1 { font-size: 24pt; }
             h2 { font-size: 14pt; margin-top: 1rem; }
@@ -210,106 +179,100 @@
             .contact-info { font-size: 10pt; }
             .job-date, .education-date { font-size: 9pt; }
             li, p { font-size: 10pt; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="resume-container">
-        <!-- Header -->
-        <header class="header">
-            <h1>Max Blum-Campo</h1>
-            <div class="contact-info">
-                <span><a href="mailto:max.blum@gmail.com">max.blum@gmail.com</a></span>
-                <span>&bull;</span>
-                <span>(914) 282-0864</span>
-            </div>
-        </header>
-
-        <!-- Experience Section -->
-        <section class="experience">
-            <h2>Experience</h2>
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3 class="job-company">Google.</h3>
-                        <p class="job-title">Senior Software Engineer</p>
-                    </div>
-                    <span class="job-date">Feb 2017 – Present (Aug 2025)</span>
+            }
+        </style>
+    </head>
+    <body>
+        <div class="resume-container">
+            <!-- Header -->
+            <header class="header">
+                <h1>Max Blum-Campo</h1>
+                <div class="contact-info">
+                    <span><a href="mailto:max.blum@gmail.com">max.blum@gmail.com</a></span>
+                    <span>&bull;</span>
+                    <span>(914) 282-0864</span>
                 </div>
-                <ul>
-                    <li>
-                        <strong>Scaled JS Infrastructure & Experimentation:</strong> Spearheaded design of critical JS delivery and A/B testing platforms, shaping release and testing culture for Google's display advertising products.
-                        <ul class="sub-item">
-                            <li>Tech Lead for Managed JS, a canary-driven rollout system, and Genotype, a client-side experimentation framework. These platforms are foundational to Google's ad products, with Managed JS serving ~1/3 of all display ad impressions and Genotype running nearly all client-side experiments.</li>
-                            <li>Drove evolution of the Genotype platform by designing and guiding implementation of new APIs for robust control over experiment exclusivity and overlap, significantly improving A/B testing safety and capabilities for many engineering teams.</li>
-                            <li>Provided technical leadership on a 10-person team, overseeing project planning, design, and implementation, and mentoring junior engineers on high-impact projects.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Modernization of Ad Serving:</strong> Led complex migration of Google Publisher Tag (GPT) library to Google's primary ad serving frontend, unblocking key business initiatives for publishers.
-                        <ul class="sub-item">
-                            <li>This migration enabled dynamic, server-side injection of per-publisher configurations at serve time, allowing publishers to adopt new features—such as privacy-related consent messaging—through a UI with no code changes required on their part.</li>
-                            <li>I proposed and implemented the majority of this migration, while delegating and overseeing the work of three other engineers on key components.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>System Analysis & Reliability:</strong> Leveraged deep system analysis to diagnose release-blocking issues and drive data-informed improvements in engineering practices.
-                        <ul class="sub-item">
-                            <li>Unblocked the entire release pipeline by identifying and fixing a subtle bug where metrics regressions were misattributed due to a previously unknown double-loading behavior of the JS library. My analysis and fix resolved the issue, allowing feature development to resume.</li>
-                            <li>Authored influential analyses on the performance implications of the JS release process, including a study that quantified the user-facing impact of browser cache invalidations, which directly informed the design of a more efficient canary testing process.</li>
-                        </ul>
-                    </li>
-                     <li>Promoted L3 &rarr; L4 &rarr; L5 over the past eight years.</li>
-                </ul>
-            </div>
-            <div class="job">
-                <div class="job-header">
-                    <div>
-                        <h3 class="job-company">Tictail.</h3>
-                        <p class="job-title">Software Engineer</p>
+            </header>
+            <!-- Experience Section -->
+            <section class="experience">
+                <h2>Experience</h2>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-company">Google.</h3>
+                            <p class="job-title">Senior Software Engineer</p>
+                        </div>
+                        <span class="job-date">Feb 2017 – Present (Aug 2025)</span>
                     </div>
-                    <span class="job-date">May 2015 – Dec 2016</span>
+                    <ul>
+                        <li>
+                            <strong>Scaled JS Infrastructure & Experimentation:</strong> Spearheaded design of critical JS delivery and A/B testing platforms, shaping release and testing culture for Google's display advertising products.
+                            <ul class="sub-item">
+                                <li>Tech Lead for Managed JS, a canary-driven rollout system, and Genotype, a client-side experimentation framework. These platforms are foundational to Google's ad products, with Managed JS serving ~1/3 of all display ad impressions and Genotype running nearly all client-side experiments.</li>
+                                <li>Drove evolution of the Genotype platform by designing and guiding implementation of new APIs for robust control over experiment exclusivity and overlap, significantly improving A/B testing safety and capabilities for many engineering teams.</li>
+                                <li>Provided technical leadership on a 10-person team, overseeing project planning, design, and implementation, and mentoring junior engineers on high-impact projects.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Modernization of Ad Serving:</strong> Led complex migration of Google Publisher Tag (GPT) library to Google's primary ad serving frontend, unblocking key business initiatives for publishers.
+                            <ul class="sub-item">
+                                <li>This migration enabled dynamic, server-side injection of per-publisher configurations at serve time, allowing publishers to adopt new features—such as privacy-related consent messaging—through a UI with no code changes required on their part.</li>
+                                <li>I proposed and implemented the majority of this migration, while delegating and overseeing the work of three other engineers on key components.</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>System Analysis & Reliability:</strong> Leveraged deep system analysis to diagnose release-blocking issues and drive data-informed improvements in engineering practices.
+                            <ul class="sub-item">
+                                <li>Unblocked the entire release pipeline by identifying and fixing a subtle bug where metrics regressions were misattributed due to a previously unknown double-loading behavior of the JS library. My analysis and fix resolved the issue, allowing feature development to resume.</li>
+                                <li>Authored influential analyses on the performance implications of the JS release process, including a study that quantified the user-facing impact of browser cache invalidations, which directly informed the design of a more efficient canary testing process.</li>
+                            </ul>
+                        </li>
+                        <li>Promoted L3 &rarr; L4 &rarr; L5 over the past eight years.</li>
+                    </ul>
                 </div>
-                 <ul>
-                    <li><strong>Novel rendering library:</strong> Developed a novel React framework for rendering self-resizing iframes using a Promise-based messaging system, eliminating "flicker" glitches by pre-rendering off-screen.</li>
-                    <li><strong>Full-stack efforts:</strong> Worked on all parts of Tictail's stack, including frontend UI, backend services, external integrations and data exports, and the API, including integrating our backends with Facebook marketing APIs to automatically create dynamic, product-specific ad campaigns on behalf of sellers.</li>
-                </ul>
-            </div>
-             <div class="job">
-                <div class="job-header">
-                    <div>
-                         <h3 class="job-company">NYC music scene.</h3>
-                         <p class="job-title">Choral conductor and singer</p>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-company">Tictail.</h3>
+                            <p class="job-title">Software Engineer</p>
+                        </div>
+                        <span class="job-date">May 2015 – Dec 2016</span>
                     </div>
-                    <span class="job-date">2011 – 2014</span>
+                    <ul>
+                        <li><strong>Novel rendering library:</strong> Developed a novel React framework for rendering self-resizing iframes using a Promise-based messaging system, eliminating "flicker" glitches by pre-rendering off-screen.</li>
+                        <li><strong>Full-stack efforts:</strong> Worked throughout stack: Frontend UI, backend services, external integrations, data exports, API. Integrated our backends with Facebook APIs to automatically create dynamic, product-specific ad campaigns on behalf of sellers.</li>
+                    </ul>
                 </div>
-                <ul>
-                    <li>Faculty at Brooklyn College & Quinnipiac; Asst. Conductor at New Amsterdam Singers; Staff tenor at New York Choral Artists.</li>
-                </ul>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills">
-            <h2>Skills</h2>
-            <p><span class="skills-category">Areas:</span> Technical Leadership, Large-Scale Systems Design, Release Engineering, A/B Testing & Data Analysis</p>
-            <p><span class="skills-category">Languages:</span> TypeScript/JavaScript, Python, C++, Java, SQL, CSS/SCSS, OCaml, Shell scripting</p>
-        </section>
-
-        <!-- Education Section -->
-        <section class="education">
-            <h2>Education</h2>
-            <div class="education-entry">
-                <p><strong>Recurse Center</strong> (a.k.a. Hacker School)</p>
-                <p class="education-date">Sep-Nov 2014</p>
-            </div>
-            <div class="education-entry">
-                 <p><strong>Yale University.</strong> <span class="education-degree">M.M. in Choral Conducting (2011), B.A. in Music (2009)</span></p>
-            </div>
-        </section>
-
-    </div>
-
-</body>
+                <div class="job">
+                    <div class="job-header">
+                        <div>
+                            <h3 class="job-company">NYC music scene.</h3>
+                            <p class="job-title">Choral conductor and singer</p>
+                        </div>
+                        <span class="job-date">2011 – 2014</span>
+                    </div>
+                    <ul>
+                        <li>Faculty at <a href="https://www.brooklyn.edu">two</a> <a href="https://www.quinnipiac.edu">colleges</a>; Asst. Conductor at N.A. Singers; Staff tenor at New York Choral Artists.</li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Skills Section -->
+            <section class="skills">
+                <h2>Skills</h2>
+                <p><span class="skills-category">Areas:</span> Technical Leadership, Large-Scale Systems Design, Release Engineering, A/B Testing & Data Analysis</p>
+                <p><span class="skills-category">Languages:</span> TypeScript/JavaScript, Python, C++, Java, SQL, CSS/SCSS, OCaml, Shell scripting</p>
+            </section>
+            <!-- Education Section -->
+            <section class="education">
+                <h2>Education</h2>
+                <div class="education-entry">
+                    <p><strong>Recurse Center</strong> (a.k.a. Hacker School)</p>
+                    <p class="education-date">Sep-Nov 2014</p>
+                </div>
+                <div class="education-entry">
+                    <p><strong>Yale University.</strong> <span class="education-degree">M.M. in Choral Conducting (2011), B.A. in Music (2009)</span></p>
+                </div>
+            </section>
+        </div>
+    </body>
 </html>
