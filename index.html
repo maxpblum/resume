@@ -1,169 +1,315 @@
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-  <style>
-    body {
-      font-family: 'Open Sans', sans-serif;
-      width: 800px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Max Blum-Campo | Resume</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- General & Reset Styles --- */
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f8f9fa;
+            color: #212529;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
 
-    .statement {
-      font-size: 0.7em;
-    }
+        .resume-container {
+            max-width: 8.5in;
+            min-height: 11in;
+            margin: 2rem auto;
+            padding: 2rem;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+        }
 
-    h1 {
-      margin: 0;
-    }
+        /* --- Typography --- */
+        h1, h2, h3 {
+            margin: 0;
+            padding: 0;
+            font-weight: 600;
+        }
 
-    .name {
-      width: 50%;
-      float: left;
-    }
+        h1 {
+            font-size: 2.5rem;
+            color: #1a1a1a;
+            letter-spacing: -1px;
+            margin-bottom: 0.25rem;
+        }
 
-    .info {
-      width: 50%;
-      float: right;
-      justify-items: right;
-    }
+        h2 {
+            font-size: 1.25rem;
+            color: #0056b3; /* A professional blue */
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: 1.5rem;
+            margin-bottom: 0.75rem;
+            border-bottom: 2px solid #e9ecef;
+            padding-bottom: 0.5rem;
+        }
 
-    h3 {
-      font-size: 1.6em;
-      margin-top: 14px;
-      margin-bottom: 10px;
-    }
+        h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #343a40;
+        }
+        
+        strong {
+            font-weight: 600;
+            color: #495057;
+        }
 
-    h5 {
-      padding-top: 0.2em;
-      padding-bottom: 0.2em;
-      margin-top: 0px;
-      margin-bottom: 0px;
-      font-size: 1.1em;
-    }
+        p {
+            margin: 0 0 0.5rem 0;
+        }
+        
+        a {
+            color: #0056b3;
+            text-decoration: none;
+            font-weight: 500;
+        }
 
-    p {
-      font-size: 0.7em;
-      margin: 0;
-    }
+        a:hover {
+            text-decoration: underline;
+        }
 
-    li {
-      list-style-type: none;
-      font-size: 0.8em;
-    }
+        /* --- Header & Contact Info --- */
+        .header {
+            text-align: left;
+            margin-bottom: 2rem;
+        }
 
-    em {
-      font-style: none;
-      font-weight: 1.2;
-    }
+        .contact-info {
+            display: flex;
+            justify-content: flex-start;
+            gap: 1.5rem;
+            margin-top: 0.5rem;
+            color: #495057;
+            font-size: 0.95rem;
+        }
+        
+        .contact-info a {
+            color: #495057;
+        }
 
-    .content {
-    }
+        /* --- Experience Section --- */
+        .job {
+            margin-bottom: 1.25rem;
+        }
 
-    .content ul {
-      padding-left: 1.0em;
-      padding-top: 0px;
-      padding-bottom: 0px;
-      margin-top: 0.4em;
-      margin-bottom: 0.4em;
-    }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.5rem;
+        }
 
-    .content li {
-      padding-top: 0.4em;
-      padding-bottom: 0.4em;
-      padding: 0.5em 0;
-      line-height: 1.5em;
-    }
+        .job-title {
+            font-size: 1rem;
+            font-weight: 500;
+            color: #343a40;
+        }
+        
+        .job-company {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
 
-    small {
-      font-weight: 200;
-    }
-  </style>
-  <title>Max Blum-Campo</title>
+        .job-date {
+            font-style: italic;
+            color: #6c757d;
+            font-size: 0.9rem;
+            white-space: nowrap;
+        }
+        
+        .job-description {
+            margin-left: 1.25rem; /* Indent the bullet points */
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 0;
+            margin: 0;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+            padding-left: 0.5rem;
+            color: #495057;
+            font-size: 0.95rem;
+        }
+        
+        .sub-item {
+            font-size: 0.9rem;
+            color: #6c757d;
+            margin-top: 0.25rem;
+            margin-left: 1rem;
+            list-style-type: circle;
+        }
+
+        /* --- Skills Section --- */
+        .skills-list {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .skills-list li {
+            background: #f1f3f5;
+            border-radius: 4px;
+            padding: 0.25rem 0.75rem;
+            margin-right: 0.5rem;
+            margin-bottom: 0.5rem;
+            display: inline-block;
+            font-size: 0.9rem;
+            color: #343a40;
+        }
+        
+        .skills-category {
+            font-weight: 600;
+            color: #212529;
+        }
+
+        /* --- Education Section --- */
+        .education-entry {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 0.5rem;
+        }
+        
+        .education-degree {
+            font-weight: 500;
+        }
+
+        /* --- Print Styles --- */
+        @media print {
+            body {
+                background-color: #fff;
+                font-size: 10pt; /* Adjust base font size for print */
+                line-height: 1.4;
+            }
+            .resume-container {
+                max-width: 100%;
+                min-height: auto;
+                margin: 0;
+                padding: 0.5in; /* Standard print margin */
+                box-shadow: none;
+                border-radius: 0;
+            }
+            h1 { font-size: 24pt; }
+            h2 { font-size: 14pt; margin-top: 1rem; }
+            h3 { font-size: 12pt; }
+            .contact-info { font-size: 10pt; }
+            .job-date, .education-date { font-size: 9pt; }
+            li, p { font-size: 10pt; }
+        }
+    </style>
 </head>
-
 <body>
 
-  <div class="header">
+    <div class="resume-container">
+        <!-- Header -->
+        <header class="header">
+            <h1>Max Blum-Campo</h1>
+            <div class="contact-info">
+                <span><a href="mailto:max.blum@gmail.com">max.blum@gmail.com</a></span>
+                <span>&bull;</span>
+                <span>(914) 282-0864</span>
+            </div>
+        </header>
 
-    <div class="name-and-info">
-      <div class="name">
-      <h1>Max Blum&#8209;Campo</h1>
-      </div>
-      <div class="info">
-      <ul>
-        <li><a href="mailto:max.blum@gmail.com">max.blum@gmail.com</a></li>
-        <li>(914) 282-0864</li>
-      </ul>
-      </div>
+        <!-- Experience Section -->
+        <section class="experience">
+            <h2>Experience</h2>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-company">Google.</h3>
+                        <p class="job-title">Senior Software Engineer</p>
+                    </div>
+                    <span class="job-date">Feb 2017 – Present (Aug 2025)</span>
+                </div>
+                <ul>
+                    <li>
+                        <strong>Scaled JS Infrastructure & Experimentation:</strong> Spearheaded design of critical JS delivery and A/B testing platforms, shaping release and testing culture for Google's display advertising products.
+                        <ul class="sub-item">
+                            <li>Tech Lead for Managed JS, a canary-driven rollout system, and Genotype, a client-side experimentation framework. These platforms are foundational to Google's ad products, with Managed JS serving ~1/3 of all display ad impressions and Genotype running nearly all client-side experiments.</li>
+                            <li>Drove evolution of the Genotype platform by designing and guiding implementation of new APIs for robust control over experiment exclusivity and overlap, significantly improving A/B testing safety and capabilities for many engineering teams.</li>
+                            <li>Provided technical leadership on a 10-person team, overseeing project planning, design, and implementation, and mentoring junior engineers on high-impact projects.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>Modernization of Ad Serving:</strong> Led complex migration of Google Publisher Tag (GPT) library to Google's primary ad serving frontend, unblocking key business initiatives for publishers.
+                        <ul class="sub-item">
+                            <li>This migration enabled dynamic, server-side injection of per-publisher configurations at serve time, allowing publishers to adopt new features—such as privacy-related consent messaging—through a UI with no code changes required on their part.</li>
+                            <li>I proposed and implemented the majority of this migration, while delegating and overseeing the work of three other engineers on key components.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <strong>System Analysis & Reliability:</strong> Leveraged deep system analysis to diagnose release-blocking issues and drive data-informed improvements in engineering practices.
+                        <ul class="sub-item">
+                            <li>Unblocked the entire release pipeline by identifying and fixing a subtle bug where metrics regressions were misattributed due to a previously unknown double-loading behavior of the JS library. My analysis and fix resolved the issue, allowing feature development to resume.</li>
+                            <li>Authored influential analyses on the performance implications of the JS release process, including a study that quantified the user-facing impact of browser cache invalidations, which directly informed the design of a more efficient canary testing process.</li>
+                        </ul>
+                    </li>
+                     <li>Promoted L3 &rarr; L4 &rarr; L5 over the past eight years.</li>
+                </ul>
+            </div>
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-company">Tictail.</h3>
+                        <p class="job-title">Software Engineer</p>
+                    </div>
+                    <span class="job-date">May 2015 – Dec 2016</span>
+                </div>
+                 <ul>
+                    <li><strong>Novel rendering library:</strong> Developed a novel React framework for rendering self-resizing iframes using a Promise-based messaging system, eliminating "flicker" glitches by pre-rendering off-screen.</li>
+                    <li><strong>Full-stack efforts:</strong> Worked on all parts of Tictail's stack, including frontend UI, backend services, external integrations and data exports, and the API, including integrating our backends with Facebook marketing APIs to automatically create dynamic, product-specific ad campaigns on behalf of sellers.</li>
+                </ul>
+            </div>
+             <div class="job">
+                <div class="job-header">
+                    <div>
+                         <h3 class="job-company">NYC music scene.</h3>
+                         <p class="job-title">Choral conductor and singer</p>
+                    </div>
+                    <span class="job-date">2011 – 2014</span>
+                </div>
+                <ul>
+                    <li>Faculty at Brooklyn College & Quinnipiac; Asst. Conductor at New Amsterdam Singers; Staff tenor at New York Choral Artists.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2>Skills</h2>
+            <p><span class="skills-category">Areas:</span> Technical Leadership, Large-Scale Systems Design, Release Engineering, A/B Testing & Data Analysis</p>
+            <p><span class="skills-category">Languages:</span> TypeScript/JavaScript, Python, C++, Java, SQL, CSS/SCSS, OCaml, Shell scripting</p>
+        </section>
+
+        <!-- Education Section -->
+        <section class="education">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <p><strong>Recurse Center</strong> (a.k.a. Hacker School)</p>
+                <p class="education-date">Sep-Nov 2014</p>
+            </div>
+            <div class="education-entry">
+                 <p><strong>Yale University.</strong> <span class="education-degree">M.M. in Choral Conducting (2011), B.A. in Music (2009)</span></p>
+            </div>
+        </section>
+
     </div>
 
-    <div class="statement">
-      Dad, full-stack engineer, musician, amateur tennis player, retro game enjoyer, amateur foodie, non-convention-going Star Wars enthusiast, allergic to horses and cats.
-    </div>
-
-  </div>
-
-  <div class="content">
-    <div class="experience">
-      <h3>Experience</h3>
-      <h5>Google. <small>Senior Software Engineer, 2017 &#8211; present.</small></h5>
-      <ul>
-        <li>Led the development of core ads JS infrastructure that brought safe rollout metrics to JS files that power ~50% of display ad impressions.</li>
-        <li>Built and scaled a powerful experimentation framework that has become the standard for client-side A/B-testing within Google display ads, powering ~50 new A/B tests per month.</li>
-        <li>My contributions and leadership were recognized with promotions to L4 and L5 (Senior Software Engineer).</li>
-      </ul>
-      <h5>Tictail. <small>Software Engineer, 2015 &#8211; 2016.</small></h5>
-      <ul>
-        <li>Developed a novel React framework for rendering self-resizing iframes using a Promise-based messaging system, eliminating "flicker" glitches by pre-rendering off-screen.</li>
-        <li>Work on all parts of Tictail's stack, including frontend UI, backend services, external integrations and
-          data exports, and the API, including integrating our backends with Facebook marketing APIs to automatically create dynamic, product-specific ad campaigns on behalf of sellers.</li>
-      </ul>
-      <h5>Projects <small>(all quite old!)</small></h5>
-      <ul>
-        <li>
-          <strong>Hanubi</strong>
-          (<a href="https://github.com/maxpblum/hanubi">source</a>), an online multiplayer implementation of the card
-          game Hanabi. Written using Javascript, Node.js, Socket.io, React.js, Redis, Underscore.js, and jQuery while
-          attending Recurse Center.
-        </li>
-        <li>
-          <strong>Maxteroids</strong>
-          (<a href="https://github.com/maxpblum/maxsteroids">source</a>), a clone of the classic arcade game Asteroids,
-          written in Python 2 with Pygame while attending Recurse Center.
-        </li>
-        <li>
-          <strong>Mineblamper</strong>
-          (<a href="https://github.com/maxpblum/mineblamper">source</a>), (<a
-            href="https://maxpblum.github.io/mineblamper/">live instance</a>), a clone of Minesweeper, written in
-          vanilla JavaScript in my spare time for fun.
-        </li>
-      </ul>
-      <h5>NYC music scene. <small>Choral conductor and singer, 2011 &#8211; 2014.</small></h5>
-      <ul>
-        <li>Ensemble conductor and adjunct faculty, Brooklyn College and Quinnipiac University.</li>
-        <li>Assistant Conductor, New Amsterdam Singers.</li>
-        <li>Staff tenor, New York Choral Artists (professional partner chorus of the New York Philharmonic, <a
-            href="https://www.nytimes.com/2015/01/17/arts/music/new-york-philharmonic-performs-verdis-requiem.html">example
-            concert review</a>.</li>
-      </ul>
-    </div>
-    <div class="skills">
-      <h3>Skills</h3>
-      <ul>
-        <li>Programming languages: TS/JS, Python, C++, Java, SQL, CSS/SCSS, OCaml, Shell scripting</li>
-        <li>Platforms and frameworks (all rusty!): React, Redux, Flux, Node, Flask</li>
-      </ul>
-    </div>
-    <div class="education">
-      <h3>Education</h3>
-      <ul>
-        <li><a href="https://recurse.com">Recurse Center</a> a.k.a. Hacker School Sep-Nov 2014<br />A 12-week intensive
-          programming retreat.</li>
-        <li>Yale University. M.M. in Choral Conducting, 2011. B.A. in Music, 2009.
-      </ul>
-    </div>
-  </div>
 </body>
 </html>
