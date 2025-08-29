@@ -71,14 +71,16 @@
             }
             /* --- Header & Contact Info --- */
             .header {
-                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: baseline;
                 margin-bottom: 2rem;
             }
             .contact-info {
                 display: flex;
                 justify-content: flex-start;
-                gap: 1.5rem;
-                margin-top: 0.5rem;
+                align-items: baseline;
+                gap: 1rem;
                 color: #495057;
                 font-size: 0.95rem;
             }
@@ -95,10 +97,17 @@
                 align-items: flex-start;
                 margin-bottom: 0.5rem;
             }
+            .job-header > div {
+                display: flex;
+                align-items: baseline;
+                gap: 0.5rem;
+                flex-wrap: wrap;
+            }
             .job-title {
                 font-size: 1rem;
                 font-weight: 500;
                 color: #343a40;
+                margin: 0;
             }
             .job-company {
                 font-size: 1.1rem;
@@ -313,3 +322,4 @@
         </div>
     </body>
 </html>
+
